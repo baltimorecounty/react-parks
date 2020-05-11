@@ -1,5 +1,6 @@
 import { Config } from "@baltimorecounty/javascript-utilities";
 import { FilterList } from "@baltimorecounty/react-filter-list";
+import ParkCard from "./components/ParkCard";
 import ParkFilters from "./Filters";
 import React from "react";
 import { Run } from "./Startup";
@@ -15,19 +16,9 @@ function App() {
         title="Baltimore County Parks and Facilities"
         filters={ParkFilters}
         apiEndpoint={getValue("parksApi")}
-        renderItem={({ name, address, amenities = [] }) => (
-          <div
-            style={{
-              border: "1px solid #e0e0e0",
-              padding: "10px",
-              marginBottom: "10px",
-            }}
-          >
-            <h2>{name}</h2>
-            <p>{address}</p>
-            {amenities.map((x) => (
-              <p key={x.value}>{x.label}</p>
-            ))}
+        renderItem={(park) => (
+          <div key={park.id} className="col-4">
+            <ParkCard {...park} />
           </div>
         )}
       />
