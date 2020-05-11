@@ -1,5 +1,6 @@
+import { Button, Card } from "@baltimorecounty/dotgov-components";
+
 import Address from "./Address";
-import { Card } from "@baltimorecounty/dotgov-components";
 import React from "react";
 
 const ParkCard = ({ image, name, acres, address, city, zip }) => {
@@ -15,10 +16,13 @@ const ParkCard = ({ image, name, acres, address, city, zip }) => {
           style={{ width: "100%" }}
         />
       </div>
-      <div className="text-left">
+      <div className="text-left mb--large">
         <h3>{name}</h3>
         <p>{acres} Acres</p>
         <Address address={address} city={city} zip={zip} />
+      </div>
+      <div className="text-left">
+        <Button as="a" href="" className="d-inline-block" text="Learn More" />
       </div>
     </Card>
   );
