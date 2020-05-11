@@ -26,7 +26,7 @@ function App() {
             <h2>{name}</h2>
             <p>{address}</p>
             {amenities.map((x) => (
-              <p>{x.label}</p>
+              <p key={x.value}>{x.label}</p>
             ))}
           </div>
         )}
