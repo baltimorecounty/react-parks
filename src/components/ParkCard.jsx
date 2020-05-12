@@ -3,7 +3,7 @@ import { Button, Card } from "@baltimorecounty/dotgov-components";
 import Address from "./Address";
 import React from "react";
 
-const ParkCard = ({ image, name, acres, address, city, zip }) => {
+const ParkCard = ({ detailsUrl, image, name, acres, address, city, zip }) => {
   return (
     <Card>
       <div className="mb--small">
@@ -16,13 +16,18 @@ const ParkCard = ({ image, name, acres, address, city, zip }) => {
           style={{ width: "100%" }}
         />
       </div>
-      <div className="text-left mb--large">
-        <h3>{name}</h3>
+      <div className="mb--large">
+        <h3 style={{ marginBottom: "0" }}>{name}</h3>
         <p>{acres} Acres</p>
         <Address address={address} city={city} zip={zip} />
       </div>
-      <div className="text-left">
-        <Button as="a" href="" className="d-inline-block" text="Learn More" />
+      <div>
+        <Button
+          as="a"
+          href={detailsUrl}
+          className="d-inline-block"
+          text="Learn More"
+        />
       </div>
     </Card>
   );
