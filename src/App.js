@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Config } from "@baltimorecounty/javascript-utilities";
+import { FilterList } from "@baltimorecounty/react-filter-list";
+import ParkCard from "./components/ParkCard";
+import ParkFilters from "./Filters";
+import React from "react";
+import { Run } from "./Startup";
+
+const { getValue } = Config;
+
+Run();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FilterList
+        title="Baltimore County Parks and Facilities"
+        filters={ParkFilters}
+        apiEndpoint={getValue("parksApi")}
+        renderItem={(park) => (
+          <div key={park.id} className="col-4">
+            <ParkCard {...park} />
+          </div>
+        )}
+      />
     </div>
   );
 }
