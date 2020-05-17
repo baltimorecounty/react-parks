@@ -15,9 +15,10 @@ function App() {
       <FilterList
         title="Baltimore County Parks and Facilities"
         filters={ParkFilters}
+        listContainerClassName="items row"
         apiEndpoint={getValue("parksApi")}
         renderItem={(park) => (
-          <div key={park.id} className="col-4">
+          <div key={park.id} className="col-lg-4 col-md-6 col-sm-6 d-flex">
             <ParkCard {...park} />
           </div>
         )}
