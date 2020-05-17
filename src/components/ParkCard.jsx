@@ -13,7 +13,7 @@ const ParkCard = ({ detailsUrl, image, name, acres, address, city, zip }) => {
             "https://upload.wikimedia.org/wikipedia/commons/9/99/Bute_Park%2C_Cardiff.jpg"
           }
           alt={`${name}`}
-          style={{ width: "100%" }}
+          style={{ width: "100%", height: "200px", objectFit: "cover" }}
         />
       </div>
       <div className="mb--large">
