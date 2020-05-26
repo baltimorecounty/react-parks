@@ -10,7 +10,7 @@ const ParkCard = ({ detailsUrl, image, name, acres, address, city, zip }) => {
         <img
           src={
             image ||
-            "https://upload.wikimedia.org/wikipedia/commons/9/99/Bute_Park%2C_Cardiff.jpg"
+            "//beta.baltimorecountymd.gov/sebin/n/f/parks-placeholder-forest.jpg"
           }
           alt={`${name}`}
           style={{ width: "100%", height: "200px", objectFit: "cover" }}
