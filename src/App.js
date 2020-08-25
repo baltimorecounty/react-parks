@@ -17,6 +17,7 @@ function App() {
         filters={ParkFilters}
         listContainerClassName="items row"
         apiEndpoint={getValue("parksApi")}
+        searchCategory="Parks"
         renderItem={(park) => (
           <div key={park.id} className="col-lg-4 col-md-6 col-sm-6 d-flex">
             <ParkCard {...park} />
