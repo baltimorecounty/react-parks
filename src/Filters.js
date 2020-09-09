@@ -52,7 +52,10 @@ const amenityFilter = {
     },
     { label: "Nature Center", value: "nature-center" },
     { label: "Nature Trails", value: "nature-trails" },
-    { label: "Outdoor Pickleball Courts", value: "outdoor-pickleball-courts" },
+    {
+      label: "Outdoor Pickleball Courts",
+      value: "outdoor-pickleball-courts",
+    },
     { label: "Paved Walking Paths", value: "paved-walking-paths" },
     { label: "Pavilions", value: "pavilions" },
     { label: "Picnic Areas", value: "picnic-areas" },
@@ -146,4 +149,9 @@ const communityFilter = {
   ],
 };
 
-export default [amenityFilter, communityFilter];
+const recordsPerPage = {
+  targetApiField: "recordsperpage",
+  value: 100,
+};
+
+export default [amenityFilter, communityFilter, recordsPerPage];

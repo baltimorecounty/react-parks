@@ -10,6 +10,7 @@ const { getValue } = Config;
 Run();
 
 function App() {
+  console.log(ParkFilters);
   return (
     <div className="App">
       <FilterList
