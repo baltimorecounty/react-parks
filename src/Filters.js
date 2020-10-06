@@ -151,7 +151,7 @@ const communityFilter = {
 
 const recordsPerPage = {
   targetApiField: "recordsperpage",
-  value: 1000,
+  value: 10,
 };
 
 export default [amenityFilter, communityFilter, recordsPerPage];
