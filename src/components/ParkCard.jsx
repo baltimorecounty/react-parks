@@ -24,7 +24,7 @@ const ParkCard = ({ detailsUrl, image, name, acres, address, city, zip }) => {
       <div>
         <Button
           as="a"
-          href={detailsUrl}
+          href={detailsUrl.replace("?sort=_title-asc", "")}
           className="d-inline-block"
           text="Learn More"
         />
