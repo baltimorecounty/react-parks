@@ -18,6 +18,7 @@ function App() {
         listContainerClassName="items row"
         apiEndpoint={getValue("parksApi")}
         includeClearButton={true}
+        includeInputFilter={true}
         searchCategory="Parks"
         renderItem={(park) => (
           <div key={park.id} className="col-lg-4 col-md-6 col-sm-6 d-flex">
