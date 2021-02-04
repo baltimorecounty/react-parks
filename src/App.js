@@ -19,7 +19,6 @@ function App() {
         apiEndpoint={getValue("parksApi")}
         includeInputFilter={true}
         includeClearButton={true}
-        includeInputFilter={true}
         searchCategory="Parks"
         inputFilterPlaceholder="Begin typing to filter the results..."
         renderItem={park => (
