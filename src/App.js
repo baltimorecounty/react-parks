@@ -17,9 +17,11 @@ function App() {
         filters={ParkFilters}
         listContainerClassName="items row"
         apiEndpoint={getValue("parksApi")}
+        includeInputFilter={true}
         includeClearButton={true}
         searchCategory="Parks"
-        renderItem={(park) => (
+        inputFilterPlaceholder="Begin typing to filter the results..."
+        renderItem={park => (
           <div key={park.id} className="col-lg-4 col-md-6 col-sm-6 d-flex">
             <ParkCard {...park} />
           </div>
