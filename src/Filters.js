@@ -1,3 +1,12 @@
+const orderFilter = {
+  targetApiField: "orderby",
+  displayName: "Sort",
+  options: [
+    { label: "A-Z", value: "A" },
+    { label: "Z-A", value: "D" },
+  ],
+};
+
 const amenityFilter = {
   targetApiField: "amenities",
   displayName: "Amenities",
@@ -154,4 +163,4 @@ const recordsPerPage = {
   value: 10,
 };
 
-export default [amenityFilter, communityFilter, recordsPerPage];
+export default [amenityFilter, communityFilter, recordsPerPage, orderFilter];
