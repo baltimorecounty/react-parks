@@ -1,11 +1,3 @@
-const orderFilter = {
-  targetApiField: "orderby",
-  displayName: "Sort",
-  options: [
-    { label: "A-Z", value: "A" },
-    { label: "Z-A", value: "D" },
-  ],
-};
 
 const amenityFilter = {
   targetApiField: "amenities",
@@ -155,6 +147,16 @@ const communityFilter = {
     { label: "Winfield PAL", value: "winfield-pal " },
     { label: "Woodlawn", value: "woodlawn " },
     { label: "Woodmoor PAL", value: "woodmoor-pal" },
+  ],
+};
+
+const orderFilter = {
+  targetApiField: "orderby",
+  displayName: "Sort",
+  useRadioButton: true,
+  options: [
+    { label: "A-Z", value: "A" },
+    { label: "Z-A", value: "D" },
   ],
 };
 
