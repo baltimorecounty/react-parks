@@ -1,5 +1,5 @@
 import { Button, Card } from "@baltimorecounty/dotgov-components";
-
+import ReactHtmlParser from "react-html-parser";
 import Address from "./Address";
 import React from "react";
 
@@ -17,7 +17,7 @@ const ParkCard = ({ detailsUrl, image, name, acres, address, city, zip }) => {
         />
       </div>
       <div className="mb--large">
-        <h3 style={{ marginBottom: "0" }}>{name}</h3>
+        <h3 style={{ marginBottom: "0" }}>{ReactHtmlParser(name)}</h3>
         <p>{acres} Acres</p>
         <Address address={address} city={city} zip={zip} />
       </div>
