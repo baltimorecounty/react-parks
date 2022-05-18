@@ -4,6 +4,10 @@ import Address from "./Address";
 import React from "react";
 
 const ParkCard = ({ detailsUrl, image, name, acres, address, city, zip }) => {
+  detailsUrl = detailsUrl
+    .replace("Parks Directory", "parks-directory")
+    .replace("Parks%20Directory", "parks-directory");
+
   return (
     <Card>
       <div className="mb--small">
