@@ -1,4 +1,3 @@
-
 const amenityFilter = {
   targetApiField: "amenities",
   displayName: "Amenities",
@@ -62,11 +61,11 @@ const amenityFilter = {
     { label: "Picnic Areas", value: "picnic-areas" },
     { label: "Piers", value: "piers" },
     { label: "Playgrounds", value: "playgrounds" },
-    {
-      label: "Police Athletic League Center",
-      value: "police-athletic-league-center",
-    },
     { label: "Pond-Lake", value: "pond-lake" },
+    {
+      label: "Recreation Activity Center",
+      value: "recreation-activity-center",
+    },
     {
       label: "Recreation And Parks Office",
       value: "recreation-and-parks-office",
